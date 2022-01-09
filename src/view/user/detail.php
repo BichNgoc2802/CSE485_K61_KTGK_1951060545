@@ -14,7 +14,7 @@
 <body>
     <main>
         <div class="container">
-        <h5 class=" text-center text-primary mt-5 mb-5">Chi tiết </h5>
+        <h5 class=" text-center text-primary mt-5 mb-5">Chi tiết nhân viên</h5>
         <table class="table ms-5">
             <thead>
                 <tr>

@@ -14,7 +14,7 @@
 <body>
     <main >
         <div class="container">
-        <h5 class="text-center text-primary mt-5">Danh sách  nhân viên</h5>
+        <h5 class="text-center text-primary mt-5">Danh sách nhân viên</h5>
 
 <div>
     <a href="index.php?controller=user&action=add" class="btn btn-primary ">Thêm</a>
@@ -29,11 +29,10 @@ include_once  'view/commons/message.php';
             <th scope="col">Họ và tên</th>
             <th scope="col">Chức vụ</th>
             <th scope="col">Phòng ban</th>
+
             <th scope="col">Lương</th>
             <th scope="col">Ngày vào làm</th>
-            <th scope="col">Thay đổi</th>
-
-         
+            
         </tr>
     </thead>
     <?php
@@ -45,8 +44,11 @@ foreach($users as $user){
             <td><?php echo $user['hovaten']; ?></td>
             <td><?php echo $user['chucvu']; ?></td>
             <td><?php echo $user['phongban']; ?></td>
+
+
             <td><?php echo $user['luong']; ?></td>
             <td><?php echo $user['ngayvaolam']; ?></td>
+            
             <td>
                 <?php
             //khai báo 3 url xem, sửa, xóa

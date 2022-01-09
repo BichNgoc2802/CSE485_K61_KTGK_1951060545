@@ -30,13 +30,13 @@
         }
         function delete(){
                 $userID = $_GET['id'];
-                if (!is_numeric($usermanv)) {
+                if (!is_numeric($userID)) {
                     header("Location: index.php?controller=user&action=index");
                     exit();
                 }
         
                 $userModel = new UserModel();
-                $isDelete = $userModel->delete($usermanv);
+                $isDelete = $userModel->delete($userID);
         
                 if ($isDelete) {
                     //chuyển hướng về trang liệt kê danh sách

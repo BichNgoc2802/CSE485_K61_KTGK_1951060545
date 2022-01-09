@@ -7,8 +7,8 @@
         private $userchucvu;
         private $userphongban;
         private $userluong;
-        private $ngayvaolam;
-     
+        private $userngayvaolam;
+    
 
 
         // Định nghĩa các phương thức để sau này nhận các thao tác tương ứng với các action
@@ -33,7 +33,7 @@
         public function getUser($userID) {
             
             $connection = $this->connectDb();
-            $querySelect = "SELECT * FROM 1951060545_employees  WHERE maNV=$usermanv";
+            $querySelect = "SELECT * FROM 1951060545_employees WHERE maNV=$usermanv";
             $result = mysqli_query($connection, $querySelect);
             $arr_user = [];
             if(mysqli_num_rows($result) > 0) {
@@ -49,10 +49,10 @@
         /**
          * Truy vấn lấy ra tất cả sách trong CSDL
          */
-        public function delete($userID) {
+        public function delete($usermanv) {
             $connection = $this->connectDb();
     
-            $queryDelete = "DELETE FROM 1951060545_employees  WHERE maNV = $usermanv";
+            $queryDelete = "DELETE FROM 1951060545_employees WHERE manv= $usermanv";
             $isDelete = mysqli_query($connection, $queryDelete);
            
             $this->closeDb($connection);
