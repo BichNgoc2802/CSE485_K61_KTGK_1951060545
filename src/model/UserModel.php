@@ -30,7 +30,7 @@
             return $arr_users;
         }
     
-        public function getUser($userID) {
+        public function getUser($usermanv) {
             
             $connection = $this->connectDb();
             $querySelect = "SELECT * FROM 1951060545_employees WHERE maNV=$usermanv";

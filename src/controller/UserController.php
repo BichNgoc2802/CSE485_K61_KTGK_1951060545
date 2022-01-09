@@ -36,7 +36,7 @@
                 }
         
                 $userModel = new UserModel();
-                $isDelete = $userModel->delete($userID);
+                $isDelete = $userModel->delete($usermanv);
         
                 if ($isDelete) {
                     //chuyển hướng về trang liệt kê danh sách
